@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yunesh Shrestha | Civil Engineering Student | Transportation & GIS</title>
+    <meta name="description" content="Official portfolio of Yunesh Shrestha, a Civil Engineering student at Pulchowk Campus interested in Transportation Engineering, GIS, infrastructure and engineering research.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#090d16',
+                        },
+                        accent: {
+                            DEFAULT: '#0ea5e9', // Professional engineering sky blue / steel accent
+                            dark: '#0284c7',
+                            light: '#38bdf8',
+                            amber: '#f59e0b'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .bg-grid-pattern {
+            background-image: radial-gradient(rgba(14, 165, 233, 0.12) 1px, transparent 1px);
+            background-size: 36px 36px;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #090d16;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0ea5e9;
+        }
+    </style>
+</head>
+<body class="bg-navy-950 text-slate-100 font-sans antialiased selection:bg-accent selection:text-navy-950">
+
+    <!-- Sticky Navigation Bar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-navy-900/90 backdrop-blur-md border-b border-slate-800/80 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#home" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-accent/10 border border-accent/30 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-navy-950 transition-colors">
+                    <i class="fa-solid fa-compass-drafting text-lg"></i>
+                </div>
+                <div>
+                    <span class="font-bold text-base tracking-tight text-white block">Yunesh Shrestha</span>
+                    <span class="text-[11px] text-accent font-mono block">Pulchowk Campus, IOE</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden xl:flex items-center gap-6 text-sm font-medium text-slate-300">
+                <a href="#home" class="hover:text-accent transition-colors">Home</a>
+                <a href="#about" class="hover:text-accent transition-colors">About</a>
+                <a href="#interests" class="hover:text-accent transition-colors">Interests</a>
+                <a href="#skills" class="hover:text-accent transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-accent transition-colors">Projects</a>
+                <a href="#research" class="hover:text-accent transition-colors">Research</a>
+                <a href="#certifications" class="hover:text-accent transition-colors">Certifications</a>
+                <a href="#awards" class="hover:text-accent transition-colors">Awards</a>
+                <a href="#experience" class="hover:text-accent transition-colors">Experience</a>
+                <a href="#contact" class="hover:text-accent transition-colors">Contact</a>
+            </nav>
+
+            <div class="hidden sm:flex items-center gap-4">
+                <a href="#projects" class="px-4 py-2.5 rounded-xl bg-accent text-navy-950 font-semibold text-xs uppercase tracking-wider hover:bg-accent-light transition-all shadow-lg shadow-accent/10 flex items-center gap-2">
+                    <span>View My Work</span>
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn" aria-label="Toggle navigation menu" class="xl:hidden p-2 rounded-xl bg-slate-800 text-slate-300 hover:text-white focus:outline-none">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer Navigation -->
+        <div id="mobile-menu" class="hidden xl:hidden bg-navy-900 border-b border-slate-800 px-6 py-6 space-y-3 shadow-2xl">
+            <a href="#home" class="block text-slate-300 hover:text-accent py-1 font-medium mobile-link">Home</a>
+            <a href="#about" class="block text-slate-300 hover:text-accent py-1 font-medium mobile-link">About</a>
+            <a href="#interests" class="block text-slate-300 hover:text-accent py-1 font-medium mobile-link">Interests</a>
+            <a href="#skills" class="block text-slate-300 hover:text-accent py-1 font-medium mobile-link">Skills</a>
+            <a href="#projects" class="block text-slate-300 hover:text-accent py-1 font-medium mobile-link">Projects</a>
+            <a href="#research" class="block text-slate-300 hover:text-accent py-1 font-medium mobile-link">Research</a>
+            <a href="#certifications" class="block text-slate-300 hover:text-accent py-1 font-medium mobile-link">Certifications</a>
+            <a href="#awards" class="block text-slate-300 hover:text-accent py-1 font-medium mobile-link">Awards</a>
+            <a href="#experience" class="block text-slate-300 hover:text-accent py-1 font-medium mobile-link">Experience</a>
+            <a href="#contact" class="block text-slate-300 hover:text-accent py-1 font-medium mobile-link">Contact</a>
+            <div class="pt-3 border-t border-slate-800">
+                <a href="#projects" class="w-full py-3 rounded-xl bg-accent text-navy-950 font-semibold text-sm text-center block shadow-md">View My Work</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="home" class="pt-20">
+
+        <!-- 1. HERO SECTION -->
+        <section class="relative min-h-[90vh] flex items-center justify-center bg-grid-pattern overflow-hidden py-20 px-4 sm:px-6 lg:px-8 border-b border-slate-800/80">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+                <div class="lg:col-span-7 space-y-6 text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-slate-700/60 text-accent font-mono text-xs shadow-sm">
+                        <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+                        <span>Pulchowk Campus · IOE · Tribhuvan University</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                        Yunesh Shrestha
+                    </h1>
+
+                    <p class="text-xl sm:text-2xl font-medium text-accent">
+                        Civil Engineering Student | Transportation Engineering & GIS Enthusiast
+                    </p>
+
+                    <p class="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed">
+                        "Exploring the intersection of transportation systems, geospatial technology, and sustainable infrastructure through engineering, research, and practical projects."
+                    </p>
+
+                    <div class="flex flex-wrap gap-4 pt-2">
+                        <a href="#projects" class="px-6 py-3.5 rounded-xl bg-accent text-navy-950 font-bold hover:bg-accent-light transition-all shadow-xl shadow-accent/15 flex items-center gap-2 text-sm">
+                            <span>Explore My Work</span>
+                            <i class="fa-solid fa-arrow-down text-xs"></i>
+                        </a>
+                        <a href="#cv" class="px-6 py-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white font-semibold hover:bg-slate-800 transition-all shadow-md flex items-center gap-2 text-sm">
+                            <i class="fa-solid fa-file-arrow-down text-accent"></i>
+                            <span>Download CV</span>
+                        </a>
+                    </div>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-slate-800/80">
+                        <div>
+                            <span class="block text-2xl font-bold text-white font-mono">3rd</span>
+                            <span class="text-xs text-slate-400">Year Engineering</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl font-bold text-white font-mono">GIS</span>
+                            <span class="text-xs text-slate-400">& Spatial Analysis</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl font-bold text-white font-mono">B.E.</span>
+                            <span class="text-xs text-slate-400">Civil Engineering</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl font-bold text-white font-mono">IOE</span>
+                            <span class="text-xs text-slate-400">Pulchowk Campus</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive GIS / Transportation Visual Canvas Box -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative w-full aspect-square max-w-md mx-auto bg-navy-900/90 rounded-2xl border border-slate-800 p-6 shadow-2xl flex flex-col justify-between overflow-hidden">
+                        <div class="absolute inset-0 bg-grid-pattern opacity-40"></div>
+                        <div class="relative z-10 flex justify-between items-center text-xs font-mono text-slate-400 border-b border-slate-800 pb-3">
+                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-layer-group text-accent"></i> GIS_TRANSPORT_NODE.NET</span>
+                            <span class="text-accent bg-accent/10 px-2 py-0.5 rounded">LAT: 27.68° N</span>
+                        </div>
+                        <div class="relative z-10 my-auto py-4 flex items-center justify-center">
+                            <svg class="w-full h-56 text-accent drop-shadow-[0_0_10px_rgba(14,165,233,0.3)]" viewBox="0 0 300 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 60 Q 90 20, 180 70 T 280 40" stroke="rgba(14, 165, 233, 0.2)" stroke-width="1.5" stroke-dasharray="4 4"/>
+                                <path d="M10 120 Q 100 80, 190 140 T 290 100" stroke="rgba(14, 165, 233, 0.3)" stroke-width="2"/>
+                                <path d="M20 180 Q 110 130, 200 190 T 280 160" stroke="rgba(14, 165, 233, 0.2)" stroke-width="1.5" stroke-dasharray="4 4"/>
+                                <path d="M50 200 L 120 130 L 220 140 L 260 70" stroke="#0ea5e9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M120 130 L 180 60 L 260 70" stroke="#38bdf8" stroke-width="2" stroke-linejoin="round" opacity="0.8"/>
+                                <path d="M90 80 L 180 140" stroke="#0284c7" stroke-width="2" opacity="0.6"/>
+                                <circle cx="50" cy="200" r="5" fill="#0ea5e9" />
+                                <circle cx="120" cy="130" r="7" fill="#ffffff" stroke="#0ea5e9" stroke-width="3" />
+                                <circle cx="180" cy="60" r="5" fill="#0ea5e9" />
+                                <circle cx="220" cy="140" r="5" fill="#0ea5e9" />
+                                <circle cx="260" cy="70" r="6" fill="#38bdf8" />
+                                <circle cx="90" cy="80" r="4" fill="#0284c7" />
+                                <circle cx="180" cy="140" r="5" fill="#0ea5e9" />
+                                <g transform="translate(220, 50)" opacity="0.7">
+                                    <circle cx="0" cy="0" r="15" stroke="#38bdf8" stroke-width="1" stroke-dasharray="2 2"/>
+                                    <line x1="-20" y1="0" x2="20" y2="0" stroke="#38bdf8" stroke-width="1"/>
+                                    <line x1="0" y1="-20" x2="0" y2="20" stroke="#38bdf8" stroke-width="1"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="relative z-10 pt-3 border-t border-slate-800 flex flex-wrap gap-2 text-[11px] font-mono text-slate-300">
+                            <span class="bg-slate-800 px-2.5 py-1 rounded border border-slate-700">Civil Engineering</span>
+                            <span class="bg-slate-800 px-2.5 py-1 rounded border border-slate-700">Transportation</span>
+                            <span class="bg-slate-800 px-2.5 py-1 rounded border border-slate-700">GIS & Spatial</span>
+                            <span class="bg-slate-800 px-2.5 py-1 rounded border border-slate-700">Research</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. ABOUT ME -->
+        <section id="about" class="py-24 bg-navy-900/50 relative border-b border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                    <div>
+                        <span class="text-accent font-mono text-sm tracking-wider uppercase">Profile Overview</span>
+                        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-1">About Me</h2>
+                    </div>
+                    <div class="mt-4 md:mt-0 text-slate-400 font-mono text-sm">
+                        <span>[ 01 // BACKGROUND & ACADEMICS ]</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+                    <div class="lg:col-span-7 space-y-6 text-slate-300 text-lg leading-relaxed">
+                        <p>
+                            I am a third-year Civil Engineering student at Pulchowk Campus, Institute of Engineering, Tribhuvan University, Nepal, with a growing interest in Transportation Engineering, Geographic Information Systems (GIS), infrastructure planning, and engineering research.
+                        </p>
+                        <p>
+                            I enjoy working on practical engineering problems and exploring how data, spatial analysis, and engineering principles can contribute to better transportation systems and sustainable infrastructure.
+                        </p>
+                        <p>
+                            My current academic interests include transportation planning, traffic analysis, GIS-based spatial analysis, road infrastructure, and research-oriented engineering applications.
+                        </p>
+                    </div>
+
+                    <div class="lg:col-span-5 bg-navy-900 rounded-2xl border border-slate-800 p-6 sm:p-8 shadow-xl">
+                        <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3">
+                            <i class="fa-solid fa-id-card text-accent"></i>
+                            <span>Academic Profile</span>
+                        </h3>
+                        <div class="space-y-4 text-sm">
+                            <div class="pb-3 border-b border-slate-800 flex flex-col sm:flex-row sm:justify-between gap-1">
+                                <span class="text-slate-400 font-mono">Education:</span>
+                                <span class="text-white font-medium">B.E. Civil Engineering</span>
+                            </div>
+                            <div class="pb-3 border-b border-slate-800 flex flex-col sm:flex-row sm:justify-between gap-1">
+                                <span class="text-slate-400 font-mono">Institution:</span>
+                                <span class="text-white font-medium text-right sm:max-w-[220px]">Pulchowk Campus, IOE, Tribhuvan University</span>
+                            </div>
+                            <div class="pb-3 border-b border-slate-800 flex flex-col sm:flex-row sm:justify-between gap-1">
+                                <span class="text-slate-400 font-mono">Location:</span>
+                                <span class="text-white font-medium">Nepal</span>
+                            </div>
+                            <div class="pt-1">
+                                <span class="text-slate-400 font-mono block mb-2">Interests:</span>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2.5 py-1 rounded bg-slate-800 text-accent text-xs font-mono border border-slate-700">Transportation Engineering</span>
+                                    <span class="px-2.5 py-1 rounded bg-slate-800 text-accent text-xs font-mono border border-slate-700">GIS & Spatial Analysis</span>
+                                    <span class="px-2.5 py-1 rounded bg-slate-800 text-accent text-xs font-mono border border-slate-700">Infrastructure</span>
+                                    <span class="px-2.5 py-1 rounded bg-slate-800 text-accent text-xs font-mono border border-slate-700">Research</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. AREAS OF INTEREST (4 Cards) -->
+        <section id="interests" class="py-24 bg-navy-950 relative border-b border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-accent font-mono text-sm tracking-wider uppercase">Core Focus Areas</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white mt-1">Areas of Interest</h2>
+                    <p class="text-slate-400 mt-3">Specialized domains guiding my academic coursework, projects, and research inquiries.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-navy-900/80 rounded-2xl border border-slate-800 p-6 hover:border-accent/50 transition-all group flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center text-accent mb-6 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-road text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">Transportation Engineering</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Transportation planning, traffic analysis, road infrastructure, mobility systems and transportation research.
+                            </p>
+                        </div>
+                        <div class="pt-6 mt-6 border-t border-slate-800 text-xs font-mono text-accent flex items-center gap-2">
+                            <i class="fa-solid fa-angles-right"></i>
+                            <span>Planning & Mobility</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-navy-900/80 rounded-2xl border border-slate-800 p-6 hover:border-accent/50 transition-all group flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center text-accent mb-6 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-map-location-dot text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">GIS & Spatial Analysis</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                ArcGIS, spatial analysis, mapping, geospatial visualization and transportation-related GIS applications.
+                            </p>
+                        </div>
+                        <div class="pt-6 mt-6 border-t border-slate-800 text-xs font-mono text-accent flex items-center gap-2">
+                            <i class="fa-solid fa-angles-right"></i>
+                            <span>Geospatial Data</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-navy-900/80 rounded-2xl border border-slate-800 p-6 hover:border-accent/50 transition-all group flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center text-accent mb-6 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-building-shield text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">Civil Engineering Design</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                AutoCAD, architectural/structural drafting, engineering drawings and design applications.
+                            </p>
+                        </div>
+                        <div class="pt-6 mt-6 border-t border-slate-800 text-xs font-mono text-accent flex items-center gap-2">
+                            <i class="fa-solid fa-angles-right"></i>
+                            <span>Drafting & Standards</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-navy-900/80 rounded-2xl border border-slate-800 p-6 hover:border-accent/50 transition-all group flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center text-accent mb-6 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-flask-vial text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">Engineering Research</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Data-driven research, spatial-temporal analysis, literature review, methodology development and academic research.
+                            </p>
+                        </div>
+                        <div class="pt-6 mt-6 border-t border-slate-800 text-xs font-mono text-accent flex items-center gap-2">
+                            <i class="fa-solid fa-angles-right"></i>
+                            <span>Academic Inquiry</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. TECHNICAL SKILLS -->
+        <section id="skills" class="py-24 bg-navy-900/50 relative border-b border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                    <div>
+                        <span class="text-accent font-mono text-sm tracking-wider uppercase">Technical Competencies</span>
+                        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-1">Technical Skills</h2>
+                    </div>
+                    <div class="mt-4 md:mt-0 text-slate-400 font-mono text-sm">
+                        <span>[ SOFTWARE & METHODOLOGIES ]</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-navy-900 rounded-2xl border border-slate-800 p-6 shadow-xl">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-lg bg-accent/10 text-accent flex items-center justify-center">
+                                <i class="fa-solid fa-laptop-code"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white">Engineering Software</h3>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex items-center justify-between p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-sm">
+                                <span class="font-medium text-slate-200">AutoCAD</span>
+                                <span class="text-xs font-mono text-accent bg-accent/10 px-2 py-0.5 rounded">Drafting</span>
+                            </li>
+                            <li class="flex items-center justify-between p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-sm">
+                                <span class="font-medium text-slate-200">Civil 3D</span>
+                                <span class="text-xs font-mono text-accent bg-accent/10 px-2 py-0.5 rounded">Design</span>
+                            </li>
+                            <li class="flex items-center justify-between p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-sm">
+                                <span class="font-medium text-slate-200">SW-DTM</span>
+                                <span class="text-xs font-mono text-accent bg-accent/10 px-2 py-0.5 rounded">Terrain</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-navy-900 rounded-2xl border border-slate-800 p-6 shadow-xl">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-lg bg-accent/10 text-accent flex items-center justify-center">
+                                <i class="fa-solid fa-earth-americas"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white">GIS & Geospatial</h3>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex items-center justify-between p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-sm">
+                                <span class="font-medium text-slate-200">ArcGIS</span>
+                                <span class="text-xs font-mono text-accent bg-accent/10 px-2 py-0.5 rounded">Mapping</span>
+                            </li>
+                            <li class="flex items-center justify-between p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-sm">
+                                <span class="font-medium text-slate-200">Spatial Analysis</span>
+                                <span class="text-xs font-mono text-accent bg-accent/10 px-2 py-0.5 rounded">Geospatial</span>
+                            </li>
+                            <li class="flex items-center justify-between p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-sm">
+                                <span class="font-medium text-slate-200">Mapping & Visualization</span>
+                                <span class="text-xs font-mono text-accent bg-accent/10 px-2 py-0.5 rounded">Cartography</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-navy-900 rounded-2xl border border-slate-800 p-6 shadow-xl">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-lg bg-accent/10 text-accent flex items-center justify-center">
+                                <i class="fa-solid fa-signs-post"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white">Transportation</h3>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex items-center justify-between p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-sm">
+                                <span class="font-medium text-slate-200">Traffic Engineering</span>
+                                <span class="text-xs font-mono text-accent bg-accent/10 px-2 py-0.5 rounded">Analysis</span>
+                            </li>
+                            <li class="flex items-center justify-between p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-sm">
+                                <span class="font-medium text-slate-200">Transportation Planning</span>
+                                <span class="text-xs font-mono text-accent bg-accent/10 px-2 py-0.5 rounded">Systems</span>
+                            </li>
+                            <li class="flex items-center justify-between p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-sm">
+                                <span class="font-medium text-slate-200">Road Design</span>
+                                <span class="text-xs font-mono text-accent bg-accent/10 px-2 py-0.5 rounded">Geometry</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-navy-900 rounded-2xl border border-slate-800 p-6 shadow-xl">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-lg bg-accent/10 text-accent flex items-center justify-center">
+                                <i class="fa-solid fa-briefcase"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white">Professional & Research</h3>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex items-center justify-between p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-sm">
+                                <span class="font-medium text-slate-200">Research & Writing</span>
+                                <span class="text-xs font-mono text-accent bg-accent/10 px-2 py-0.5 rounded">Academic</span>
+                            </li>
+                            <li class="flex items-center justify-between p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-sm">
+                                <span class="font-medium text-slate-200">Engineering Drawing</span>
+                                <span class="text-xs font-mono text-accent bg-accent/10 px-2 py-0.5 rounded">Drafting</span>
+                            </li>
+                            <li class="flex items-center justify-between p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-sm">
+                                <span class="font-medium text-slate-200">Teamwork & Presentation</span>
+                                <span class="text-xs font-mono text-accent bg-accent/10 px-2 py-0.5 rounded">Leadership</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. FEATURED PROJECTS -->
+        <section id="projects" class="py-24 bg-navy-950 relative border-b border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                    <div>
+                        <span class="text-accent font-mono text-sm tracking-wider uppercase">Practical Portfolio</span>
+                        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-1">Featured Projects</h2>
+                    </div>
+                    <div class="mt-4 md:mt-0 text-slate-400 font-mono text-sm">
+                        <span>[ RESEARCH & DESIGN INITIATIVES ]</span>
+                    </div>
+                </div>
+
+                <!-- Projects container rendered dynamically from JS data array -->
+                <div id="projects-grid" class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Populated via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. RESEARCH SECTION -->
+        <section id="research" class="py-24 bg-navy-900/50 relative border-b border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                    <div>
+                        <span class="text-accent font-mono text-sm tracking-wider uppercase">Academic Inquiry</span>
+                        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-1">Research & Academic Interests</h2>
+                    </div>
+                    <div class="mt-4 md:mt-0 text-slate-400 font-mono text-sm">
+                        <span>[ TRANSPORTATION + GIS ]</span>
+                    </div>
+                </div>
+
+                <div class="bg-navy-900 rounded-2xl border border-slate-800 p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-80 h-80 bg-accent/5 rounded-full blur-3xl pointer-events-none"></div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+                        <div class="lg:col-span-8 space-y-6">
+                            <div class="flex flex-wrap gap-3 items-center">
+                                <span class="px-3 py-1 rounded-full bg-accent/10 text-accent font-mono text-xs border border-accent/20">Active Research Focus</span>
+                                <span class="text-slate-400 font-mono text-xs"><i class="fa-solid fa-location-dot text-accent"></i> Kathmandu Valley, Nepal</span>
+                            </div>
+
+                            <h3 class="text-2xl sm:text-3xl font-bold text-white leading-tight">
+                                Spatiotemporal Quantification of Ride-Hailing Deadheading and Congestion Distribution
+                            </h3>
+
+                            <p class="text-slate-300 text-base leading-relaxed">
+                                Investigating how ride-hailing services generate unoccupied vehicle travel (deadheading) during peak and off-peak hours across urban arterial networks, utilizing GIS spatial analysis to model urban traffic friction and congestion patterns.
+                            </p>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                                <div class="space-y-2">
+                                    <h4 class="text-xs font-mono text-accent uppercase tracking-wider">Research Areas</h4>
+                                    <ul class="space-y-1 text-sm text-slate-300">
+                                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-accent text-xs"></i> Transportation Engineering</li>
+                                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-accent text-xs"></i> Geographic Information Systems (GIS)</li>
+                                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-accent text-xs"></i> Urban Mobility & Logistics</li>
+                                    </ul>
+                                </div>
+                                <div class="space-y-2">
+                                    <h4 class="text-xs font-mono text-accent uppercase tracking-wider">Key Research Themes</h4>
+                                    <ul class="space-y-1 text-sm text-slate-300">
+                                        <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-accent text-xs"></i> Spatial & temporal variation</li>
+                                        <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-accent text-xs"></i> Congestion distribution modeling</li>
+                                        <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-accent text-xs"></i> Transportation efficiency optimization</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-4 flex flex-col justify-center border-t lg:border-t-0 lg:border-l border-slate-800 pt-6 lg:pt-0 lg:pl-8 space-y-4">
+                            <div class="bg-slate-900/80 p-5 rounded-xl border border-slate-800 space-y-3">
+                                <span class="text-xs font-mono text-slate-400 block">STUDY PARAMETERS</span>
+                                <div class="text-sm space-y-2">
+                                    <div class="flex justify-between"><span class="text-slate-400">Methodology:</span> <span class="text-white font-mono">Spatial Mapping</span></div>
+                                    <div class="flex justify-between"><span class="text-slate-400">Software:</span> <span class="text-white font-mono">ArcGIS / QGIS</span></div>
+                                    <div class="flex justify-between"><span class="text-slate-400">Context:</span> <span class="text-white font-mono">Urban Traffic</span></div>
+                                </div>
+                            </div>
+
+                            <a href="#contact" class="w-full py-3.5 rounded-xl bg-accent text-navy-950 font-semibold text-sm hover:bg-accent-light transition-all text-center shadow-lg block">
+                                Discuss Research
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. CERTIFICATIONS -->
+        <section id="certifications" class="py-24 bg-navy-950 relative border-b border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                    <div>
+                        <span class="text-accent font-mono text-sm tracking-wider uppercase">Credentials & Training</span>
+                        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-1">Certifications</h2>
+                    </div>
+                    <div class="mt-4 md:mt-0 text-slate-400 font-mono text-sm">
+                        <span>[ PROFESSIONAL DEVELOPMENT ]</span>
+                    </div>
+                </div>
+
+                <div id="certifications-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Populated via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. AWARDS & ACHIEVEMENTS -->
+        <section id="awards" class="py-24 bg-navy-900/50 relative border-b border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                    <div>
+                        <span class="text-accent font-mono text-sm tracking-wider uppercase">Recognition & Honors</span>
+                        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-1">Awards & Achievements</h2>
+                    </div>
+                    <div class="mt-4 md:mt-0 text-slate-400 font-mono text-sm">
+                        <span>[ COMPETITIONS & MILESTONES ]</span>
+                    </div>
+                </div>
+
+                <div id="awards-container" class="max-w-4xl mx-auto space-y-6">
+                    <!-- Populated via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. EXPERIENCE / ACTIVITIES -->
+        <section id="experience" class="py-24 bg-navy-950 relative border-b border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                    <div>
+                        <span class="text-accent font-mono text-sm tracking-wider uppercase">Involvement & Engagement</span>
+                        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-1">Experience & Activities</h2>
+                    </div>
+                    <div class="mt-4 md:mt-0 text-slate-400 font-mono text-sm">
+                        <span>[ TIMELINE & LEADERSHIP ]</span>
+                    </div>
+                </div>
+
+                <div id="experience-container" class="max-w-4xl mx-auto space-y-8">
+                    <!-- Populated via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. EDUCATION -->
+        <section id="education" class="py-24 bg-navy-900/50 relative border-b border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                    <div>
+                        <span class="text-accent font-mono text-sm tracking-wider uppercase">Academic Background</span>
+                        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-1">Education</h2>
+                    </div>
+                    <div class="mt-4 md:mt-0 text-slate-400 font-mono text-sm">
+                        <span>[ TRIBHUVAN UNIVERSITY ]</span>
+                    </div>
+                </div>
+
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-navy-900 rounded-2xl border border-slate-800 p-8 sm:p-10 shadow-xl relative">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+                            <div>
+                                <span class="px-3 py-1 rounded-full bg-accent/10 text-accent font-mono text-xs border border-accent/20">Currently Pursuing</span>
+                                <h3 class="text-2xl font-bold text-white mt-2">Bachelor of Civil Engineering</h3>
+                                <p class="text-accent font-medium mt-1">Pulchowk Campus, Institute of Engineering, Tribhuvan University</p>
+                            </div>
+                            <div class="text-right font-mono text-sm text-slate-400">
+                                <span class="block">Lalitpur, Nepal</span>
+                                <span class="text-xs text-slate-500">3rd Year Student</span>
+                            </div>
+                        </div>
+
+                        <div class="space-y-6 pt-6 border-t border-slate-800">
+                            <div>
+                                <h4 class="text-xs font-mono text-accent uppercase tracking-wider mb-2">Core Engineering Coursework</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 rounded-lg bg-slate-800 text-slate-300 text-xs font-mono border border-slate-700">Transportation Engineering</span>
+                                    <span class="px-3 py-1 rounded-lg bg-slate-800 text-slate-300 text-xs font-mono border border-slate-700">Highway Engineering</span>
+                                    <span class="px-3 py-1 rounded-lg bg-slate-800 text-slate-300 text-xs font-mono border border-slate-700">Surveying & Geomatics</span>
+                                    <span class="px-3 py-1 rounded-lg bg-slate-800 text-slate-300 text-xs font-mono border border-slate-700">Structural Analysis</span>
+                                    <span class="px-3 py-1 rounded-lg bg-slate-800 text-slate-300 text-xs font-mono border border-slate-700">Fluid Mechanics</span>
+                                    <span class="px-3 py-1 rounded-lg bg-slate-800 text-slate-300 text-xs font-mono border border-slate-700">Engineering Economics</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. PROFESSIONAL TIMELINE -->
+        <section class="py-20 bg-navy-950 relative border-b border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <span class="text-accent font-mono text-sm tracking-wider uppercase">Progression Path</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1 mb-12">Professional Timeline</h2>
+
+                <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-6 text-sm font-mono text-slate-300">
+                    <div class="px-4 py-2 rounded-xl bg-navy-900 border border-slate-800 text-accent font-bold">1. Education</div>
+                    <i class="fa-solid fa-arrow-right text-slate-600 hidden sm:inline"></i>
+                    <div class="px-4 py-2 rounded-xl bg-navy-900 border border-slate-800">2. Competitions</div>
+                    <i class="fa-solid fa-arrow-right text-slate-600 hidden sm:inline"></i>
+                    <div class="px-4 py-2 rounded-xl bg-navy-900 border border-slate-800">3. Certifications</div>
+                    <i class="fa-solid fa-arrow-right text-slate-600 hidden sm:inline"></i>
+                    <div class="px-4 py-2 rounded-xl bg-navy-900 border border-slate-800">4. Projects</div>
+                    <i class="fa-solid fa-arrow-right text-slate-600 hidden sm:inline"></i>
+                    <div class="px-4 py-2 rounded-xl bg-navy-900 border border-slate-800">5. Research</div>
+                    <i class="fa-solid fa-arrow-right text-slate-600 hidden sm:inline"></i>
+                    <div class="px-4 py-2 rounded-xl bg-navy-900 border border-slate-800 text-accent">6. Future Career</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 12. CV SECTION -->
+        <section id="cv" class="py-24 bg-navy-900/50 relative border-b border-slate-800/80">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="bg-navy-900 rounded-3xl border border-slate-800 p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+                    <div class="absolute inset-0 bg-grid-pattern opacity-30 pointer-events-none"></div>
+
+                    <div class="relative z-10 space-y-6">
+                        <div class="w-16 h-16 rounded-2xl bg-accent/10 border border-accent/30 text-accent flex items-center justify-center mx-auto text-2xl">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+
+                        <h2 class="text-3xl font-bold text-white">Want to know more about my work?</h2>
+
+                        <p class="text-slate-300 text-base max-w-xl mx-auto leading-relaxed">
+                            "Explore my academic background, technical skills, projects, certifications and achievements."
+                        </p>
+
+                        <div class="pt-4 flex flex-wrap justify-center gap-4">
+                            <button onclick="downloadCV()" class="px-8 py-4 rounded-xl bg-accent text-navy-950 font-bold hover:bg-accent-light transition-all shadow-xl shadow-accent/20 flex items-center gap-3">
+                                <i class="fa-solid fa-download text-lg"></i>
+                                <span>Download CV</span>
+                            </button>
+                        </div>
+                        <p class="text-xs text-slate-500 font-mono">PDF format • Updated for 2026 Academic & Professional Applications</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 13. CONTACT SECTION -->
+        <section id="contact" class="py-24 bg-navy-950 relative border-b border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-accent font-mono text-sm tracking-wider uppercase">Get In Touch</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white mt-1">Let's Connect</h2>
+                    <p class="text-slate-400 mt-3 text-base">
+                        "I am always interested in connecting with fellow engineers, researchers, students, professionals and organizations working in transportation, GIS and infrastructure."
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start max-w-6xl mx-auto">
+                    <div class="lg:col-span-5 space-y-6">
+                        <div class="bg-navy-900 rounded-2xl border border-slate-800 p-6 flex items-center gap-4 shadow-xl">
+                            <div class="w-12 h-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-mono text-slate-400 block">Email</span>
+                                <a href="mailto:yunesh.shrestha@example.com" class="text-white font-medium hover:text-accent transition-colors">yunesh.shrestha@example.com</a>
+                            </div>
+                        </div>
+
+                        <div class="bg-navy-900 rounded-2xl border border-slate-800 p-6 flex items-center gap-4 shadow-xl">
+                            <div class="w-12 h-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-mono text-slate-400 block">LinkedIn</span>
+                                <a href="https://linkedin.com" target="_blank" rel="noopener" class="text-white font-medium hover:text-accent transition-colors">linkedin.com/in/yunesh-shrestha</a>
+                            </div>
+                        </div>
+
+                        <div class="bg-navy-900 rounded-2xl border border-slate-800 p-6 flex items-center gap-4 shadow-xl">
+                            <div class="w-12 h-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-brands fa-github"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-mono text-slate-400 block">GitHub</span>
+                                <a href="https://github.com" target="_blank" rel="noopener" class="text-white font-medium hover:text-accent transition-colors">github.com/yunesh-shrestha</a>
+                            </div>
+                        </div>
+
+                        <div class="bg-navy-900 rounded-2xl border border-slate-800 p-6 flex items-center gap-4 shadow-xl">
+                            <div class="w-12 h-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-mono text-slate-400 block">Location</span>
+                                <span class="text-white font-medium">Pulchowk Campus, Lalitpur, Nepal</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-7 bg-navy-900 rounded-2xl border border-slate-800 p-8 shadow-2xl">
+                        <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-xs font-mono text-slate-300 mb-2">Your Name</label>
+                                <input type="text" id="name" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accent transition-colors" placeholder="e.g. Dr. Ram Sharma">
+                            </div>
+
+                            <div>
+                                <label for="email" class="block text-xs font-mono text-slate-300 mb-2">Your Email</label>
+                                <input type="email" id="email" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accent transition-colors" placeholder="e.g. ram.sharma@university.edu.np">
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-xs font-mono text-slate-300 mb-2">Message</label>
+                                <textarea id="message" rows="5" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accent transition-colors resize-none" placeholder="Write your message or inquiry here..."></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-4 rounded-xl bg-accent text-navy-950 font-bold hover:bg-accent-light transition-all shadow-lg flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-paper-plane text-sm"></i>
+                                <span>Send Message</span>
+                            </button>
+
+                            <div id="form-success-msg" class="hidden text-center text-accent text-sm font-mono pt-2">
+                                <i class="fa-solid fa-circle-check"></i> Thank you! Your message has been sent successfully.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 14. FOOTER -->
+    <footer class="bg-navy-900 border-t border-slate-800 py-12 text-slate-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+                <span class="font-bold text-white text-base block">Yunesh Shrestha</span>
+                <span class="text-xs font-mono text-accent block mt-1">Civil Engineering | Transportation Engineering | GIS</span>
+            </div>
+
+            <div class="flex items-center gap-6 text-sm">
+                <a href="https://linkedin.com" target="_blank" rel="noopener" class="hover:text-accent transition-colors"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+                <a href="https://github.com" target="_blank" rel="noopener" class="hover:text-accent transition-colors"><i class="fa-brands fa-github"></i> GitHub</a>
+                <a href="mailto:yunesh.shrestha@example.com" class="hover:text-accent transition-colors"><i class="fa-solid fa-envelope"></i> Email</a>
+            </div>
+
+            <div class="text-xs font-mono text-slate-500 text-center md:text-right">
+                © 2026 Yunesh Shrestha. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Project Detail Modal -->
+    <div id="project-modal" class="fixed inset-0 z-50 bg-navy-950/80 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-navy-900 border border-slate-800 rounded-2xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl relative">
+            <button onclick="closeProjectModal()" aria-label="Close modal" class="absolute top-6 right-6 text-slate-400 hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <span id="modal-tag" class="px-3 py-1 rounded-full bg-accent/10 text-accent font-mono text-xs border border-accent/20 inline-block mb-4">Project Details</span>
+            <h3 id="modal-title" class="text-2xl font-bold text-white mb-3">Project Title</h3>
+            <p id="modal-desc" class="text-slate-300 text-sm leading-relaxed mb-6">Description</p>
+            
+            <div class="space-y-4 pt-4 border-t border-slate-800 text-sm">
+                <div>
+                    <span class="text-xs font-mono text-accent block mb-1">Tools & Tags</span>
+                    <span id="modal-tools" class="text-slate-200 font-mono text-xs">Tools</span>
+                </div>
+                <div>
+                    <span class="text-xs font-mono text-accent block mb-1">Context & Scope</span>
+                    <span id="modal-context" class="text-slate-200 text-sm">Context</span>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-4 border-t border-slate-800 flex justify-end">
+                <button onclick="closeProjectModal()" class="px-6 py-2.5 rounded-xl bg-slate-800 text-white font-semibold text-sm hover:bg-slate-700 transition-all">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interactive Credential Modal -->
+    <div id="credential-modal" class="fixed inset-0 z-50 bg-navy-950/80 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-navy-900 border border-slate-800 rounded-2xl max-w-xl w-full p-6 sm:p-8 shadow-2xl relative">
+            <button onclick="closeCredentialModal()" aria-label="Close credential modal" class="absolute top-6 right-6 text-slate-400 hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="w-12 h-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center text-xl mb-4">
+                <i class="fa-solid fa-award"></i>
+            </div>
+            <span id="cred-org" class="text-xs font-mono text-accent block mb-1">Issuing Organization</span>
+            <h3 id="cred-title" class="text-2xl font-bold text-white mb-2">Certification Title</h3>
+            <p id="cred-date" class="text-xs font-mono text-slate-400 mb-4">Completion Date</p>
+            <p id="cred-skills" class="text-slate-300 text-sm leading-relaxed mb-6">Skills gained description.</p>
+
+            <div class="pt-4 border-t border-slate-800 flex justify-end">
+                <button onclick="closeCredentialModal()" class="px-6 py-2.5 rounded-xl bg-accent text-navy-950 font-semibold text-sm hover:bg-accent-light transition-all">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modular Data Structures & JavaScript Controller -->
+    <script>
+        // Reusable Data Structures for Projects, Certifications, Awards, and Experience
+        const projectsData = [
+            {
+                title: "Spatiotemporal Quantification of Ride-Hailing Deadheading Trips",
+                category: "Research & GIS",
+                description: "An undergraduate research project investigating the spatial and temporal distribution of deadheading trips in ride-hailing services, with emphasis on transportation efficiency and congestion implications in Kathmandu Valley.",
+                tags: ["Transportation Engineering", "GIS", "Research", "Spatial Analysis"],
+                context: "This research utilizes spatial data methodologies and ArcGIS mapping to evaluate unoccupied vehicle miles traveled (VMT), analyzing peak hour congestion corridors and urban mobility bottlenecks across Kathmandu Valley."
+            },
+            {
+                title: "AutoCAD / Civil Engineering Design Projects",
+                category: "Design & Drafting",
+                description: "Engineering drawing and design projects involving architectural and structural drawings, drafting standards and engineering design principles in accordance with National Building Codes (NBC).",
+                tags: ["AutoCAD", "Architectural Drawing", "Structural Drawing", "NBC"],
+                context: "Detailed creation of floor plans, elevations, cross-sections, and reinforcement detailing using professional CAD drafting standards and structural design specifications."
+            },
+            {
+                title: "Road & Transportation Engineering Projects",
+                category: "Transportation & Highway",
+                description: "Academic projects involving road geometry, horizontal & vertical alignment, traffic characteristics, pavement-related analysis, and transportation engineering applications.",
+                tags: ["Transportation", "Highway Engineering", "Road Design"],
+                context: "Comprehensive coursework on highway alignment design, superelevation calculations, sight distance analysis, and traffic volume studies."
+            }
+        ];
+
+        const certificationsData = [
+            {
+                title: "Spatial Analysis & ArcGIS Fundamentals",
+                organization: "Esri / Online MOOC",
+                category: "GIS & Geospatial",
+                date: "2025",
+                skills: "Spatial modeling, vector/raster data management, map generation."
+            },
+            {
+                title: "Transportation Planning & Traffic Studies",
+                organization: "Academic Certification",
+                category: "Transportation",
+                date: "2025",
+                skills: "Traffic flow analysis, intersection design, urban transit planning."
+            },
+            {
+                title: "Advanced AutoCAD & Civil 3D Drafting",
+                organization: "Engineering Training Center",
+                category: "Engineering Software",
+                date: "2024",
+                skills: "3D terrain modeling, grading, profile generation, structural detailing."
+            },
+            {
+                title: "Research Methodology & Technical Writing",
+                organization: "IOE Workshop",
+                category: "Professional Development",
+                date: "2024",
+                skills: "Literature review, academic structuring, technical documentation."
+            }
+        ];
+
+        const awardsData = [
+            {
+                position: "1st Position",
+                name: "CADATHON Competition",
+                organizer: "Pulchowk Campus Engineering Societies",
+                date: "2024/2025",
+                description: "Secured first place in an intensive engineering design and drafting competition, demonstrating precision, adherence to architectural and structural standards, and efficient execution under strict time constraints.",
+                focus: "AutoCAD · Drafting Standards · Design Accuracy"
+            }
+        ];
+
+        const experienceData = [
+            {
+                title: "Academic & Research Projects",
+                role: "Ongoing",
+                description: "Civil engineering and transportation-related academic work, focusing on geospatial analysis of traffic congestion, geometric road design, and infrastructure planning frameworks.",
+                institution: "Pulchowk Campus, IOE, Tribhuvan University"
+            },
+            {
+                title: "Competitions & Design Hackathons",
+                role: "Active Participant",
+                description: "Participating in engineering competitions including CADATHON and structural design challenges, collaborating with peers to solve practical civil engineering problems under pressure.",
+                institution: "Inter-College & Campus Events"
+            },
+            {
+                title: "Student Activities & Societies",
+                role: "Member",
+                description: "Active involvement in engineering student clubs and professional societies, contributing to technical workshops, seminars, and collaborative academic initiatives.",
+                institution: "Pulchowk Campus Student Community"
+            }
+        ];
+
+        // Render functions to inject modular data into DOM
+        function renderProjects() {
+            const grid = document.getElementById('projects-grid');
+            grid.innerHTML = projectsData.map((p, idx) => `
+                <div class="bg-navy-900 rounded-2xl border border-slate-800 p-6 sm:p-8 flex flex-col justify-between hover:border-accent/50 transition-all shadow-xl group">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="px-3 py-1 rounded-full bg-accent/10 text-accent font-mono text-xs border border-accent/20">${p.category}</span>
+                            <span class="text-slate-500 font-mono text-xs">0${idx+1}</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-accent transition-colors">
+                            ${p.title}
+                        </h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            ${p.description}
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            ${p.tags.map(t => `<span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs font-mono border border-slate-700">${t}</span>`).join('')}
+                        </div>
+                    </div>
+                    <div>
+                        <button onclick="openProjectModal(${idx})" class="w-full py-3 rounded-xl bg-slate-800 hover:bg-accent hover:text-navy-950 text-white text-sm font-semibold transition-all border border-slate-700 flex items-center justify-center gap-2">
+                            <span>View Project Details</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderCertifications() {
+            const grid = document.getElementById('certifications-grid');
+            grid.innerHTML = certificationsData.map((c, idx) => `
+                <div class="bg-navy-900 rounded-2xl border border-slate-800 p-6 flex flex-col justify-between shadow-xl">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-2.5 py-1 rounded bg-accent/10 text-accent font-mono text-xs">${c.category}</span>
+                            <span class="text-slate-500 font-mono text-xs">${c.date}</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">${c.title}</h3>
+                        <p class="text-slate-400 text-xs font-mono mb-4">Issuing Org: ${c.organization}</p>
+                        <p class="text-slate-300 text-sm mb-6">Skills: ${c.skills}</p>
+                    </div>
+                    <div>
+                        <button onclick="openCredentialModal(${idx})" class="w-full py-2.5 rounded-lg bg-slate-800 hover:bg-accent hover:text-navy-950 text-white text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-certificate"></i>
+                            <span>View Credential</span>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderAwards() {
+            const container = document.getElementById('awards-container');
+            container.innerHTML = awardsData.map(a => `
+                <div class="bg-navy-900 rounded-2xl border border-accent/40 p-8 shadow-2xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-accent text-navy-950 font-mono text-xs font-bold px-4 py-1.5 rounded-bl-xl">
+                        🏆 ${a.position}
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex flex-wrap gap-2 items-center text-xs font-mono text-accent">
+                            <span>${a.name}</span>
+                            <span>•</span>
+                            <span>Engineering Design Event</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">
+                            ${a.position} – ${a.name}
+                        </h3>
+                        <p class="text-slate-300 text-base leading-relaxed">
+                            ${a.description}
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-slate-800 text-sm">
+                            <div>
+                                <span class="text-slate-400 font-mono block text-xs">Organizing Institution</span>
+                                <span class="text-white font-medium">${a.organizer}</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-400 font-mono block text-xs">Focus Areas</span>
+                                <span class="text-white font-medium">${a.focus}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderExperience() {
+            const container = document.getElementById('experience-container');
+            container.innerHTML = experienceData.map(e => `
+                <div class="bg-navy-900 rounded-2xl border border-slate-800 p-6 sm:p-8 relative pl-8 sm:pl-10">
+                    <div class="absolute left-0 top-0 bottom-0 w-2 bg-accent rounded-l-2xl"></div>
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-3">
+                        <h3 class="text-xl font-bold text-white">${e.title}</h3>
+                        <span class="text-xs font-mono text-accent bg-accent/10 px-2.5 py-1 rounded w-fit mt-1 sm:mt-0">${e.role}</span>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        ${e.description}
+                    </p>
+                    <div class="text-xs font-mono text-slate-400">${e.institution}</div>
+                </div>
+            `).join('');
+        }
+
+        // Initialize modular data rendering on window load
+        window.onload = function() {
+            renderProjects();
+            renderCertifications();
+            renderAwards();
+            renderExperience();
+        };
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Project Modal handlers
+        function openProjectModal(index) {
+            const p = projectsData[index];
+            document.getElementById('modal-title').innerText = p.title;
+            document.getElementById('modal-desc').innerText = p.description;
+            document.getElementById('modal-tools').innerText = p.tags.join(', ');
+            document.getElementById('modal-context').innerText = p.context;
+            document.getElementById('project-modal').classList.remove('hidden');
+            document.getElementById('project-modal').classList.add('flex');
+        }
+
+        function closeProjectModal() {
+            document.getElementById('project-modal').classList.add('hidden');
+            document.getElementById('project-modal').classList.remove('flex');
+        }
+
+        // Credential Modal handlers
+        function openCredentialModal(index) {
+            const c = certificationsData[index];
+            document.getElementById('cred-title').innerText = c.title;
+            document.getElementById('cred-org').innerText = c.organization;
+            document.getElementById('cred-date').innerText = 'Completed in ' + c.date;
+            document.getElementById('cred-skills').innerText = 'Key Skills Gained: ' + c.skills;
+            document.getElementById('credential-modal').classList.remove('hidden');
+            document.getElementById('credential-modal').classList.add('flex');
+        }
+
+        function closeCredentialModal() {
+            document.getElementById('credential-modal').classList.add('hidden');
+            document.getElementById('credential-modal').classList.remove('flex');
+        }
+
+        // CV Download Simulation
+        function downloadCV() {
+            const btn = event.currentTarget;
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i><span>Preparing CV PDF...</span>';
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fa-solid fa-check"></i><span>CV Downloaded Successfully</span>';
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                }, 3000);
+            }, 1000);
+        }
+
+        // Contact form simulation
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const successMsg = document.getElementById('form-success-msg');
+            successMsg.classList.remove('hidden');
+            document.getElementById('contact-form').reset();
+            setTimeout(() => {
+                successMsg.classList.add('hidden');
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
